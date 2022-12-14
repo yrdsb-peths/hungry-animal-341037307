@@ -33,11 +33,7 @@ dependency8.type=UsesDependency
 dependency9.from=Elephant
 dependency9.to=MyWorld
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-height=1056
+
 package.numDependencies=10
 package.numTargets=6
 project.charset=windows-1252
@@ -99,5 +95,4 @@ target6.y=0
 version=3.0.0
 width=1936
 world.lastInstantiated=TitleScreen
-xPosition=-8
-yPosition=-8
+

@@ -32,7 +32,7 @@ public class MyWorld extends World
         addObject(elephant, 300, 300);
         
         scoreLabel = new Label(0, 70);
-	addObject(scoreLabel, 20, 20);
+	addObject(scoreLabel, 30, 20);
         
         timeClass.mark();
         spawnApple();
