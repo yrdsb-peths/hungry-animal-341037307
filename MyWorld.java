@@ -11,9 +11,12 @@ public class MyWorld extends World
     
     
     SimpleTimer timeClass = new SimpleTimer();
-    boolean rythmMode = false;
+    boolean rythmMode = true;
     boolean gameEnded = false;
-    
+
+    Label gameOverLabel = new Label("Space to Restart", 100);
+    Label subtext = new Label("Subtext", 80);    
+
     public static int score = 0;
     public Label scoreLabel;
     int level = 1;
@@ -41,7 +44,7 @@ public class MyWorld extends World
     }
     public void act()
     {   
-        if (timeClass.millisElapsed() > 500 && rythmMode)
+        if (timeClass.millisElapsed() > 300 && rythmMode &&!gameEnded)
         {
             spawnApple();
             timeClass.mark();
@@ -50,8 +53,8 @@ public class MyWorld extends World
         if (gameEnded == true && Greenfoot.isKeyDown("space"))
         {
             gameEnded = false;
-            spawnApple();
-            //timeClass.mark();
+            MyWorld gameWorld = new MyWorld();
+            Greenfoot.setWorld(gameWorld);
         }
     }
 
@@ -67,9 +70,9 @@ public class MyWorld extends World
     }
     public void gameOver()
     {
-        Label gameOverLabel = new Label("Space to Restart", 100);
+        
         addObject(gameOverLabel, getWidth()/2, getHeight()/2);
-        Label subtext = new Label("Subtext", 80);
+        
         addObject(gameOverLabel, getWidth()/3, getHeight()/3);
         gameEnded = true;
     }    

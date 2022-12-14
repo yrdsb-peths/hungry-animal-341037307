@@ -43,21 +43,13 @@ public class Elephant extends Actor
     {
         GreenfootSound elephantSound = new GreenfootSound("sounds/elephantcub.mp3");
         elephantSound.play();
-	GreenfootSound a = new GreenfootSound("sounds/elephantcub.mp3");
-        a.play();
-	GreenfootSound b= new GreenfootSound("sounds/elephantcub.mp3");
-        b.play();
-	GreenfootSound c= new GreenfootSound("sounds/elephantcub.mp3");
-        c.play();
-	GreenfootSound d= new GreenfootSound("sounds/elephantcub.mp3");
-        d.play();
         // Add your action code here.
         if (Greenfoot.isKeyDown("d")) {
-            move(5);
+            move(25);
 	    facing = "right";
         }
         if (Greenfoot.isKeyDown("a")) {
-            move(-5);
+            move(-25);
 	    facing = "left";
         }
         
@@ -121,7 +113,7 @@ public class Elephant extends Actor
             removeTouching(Apple.class);
             
             MyWorld world = (MyWorld) getWorld();
-            world.spawnApple();
+            //world.spawnApple();
             world.increaseScore();
             elephantSound.play();
         }
